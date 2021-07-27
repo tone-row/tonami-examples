@@ -28,3 +28,8 @@ export const Highlight = (props: SyntaxHighlighterProps) => {
     />
   );
 };
+
+export const triggerSC = () => {
+  const sc = document.querySelector("[data-styled-version]");
+  if (sc) sc.setAttribute("z", Math.random().toString());
+};

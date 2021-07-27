@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { styled as tonamiStyled } from "tonami";
 import React, { useEffect, useReducer } from "react";
-import { BigButton, Columns, Highlight } from "../components";
+import { BigButton, Columns, Highlight, triggerSC } from "../components";
 
 const randomColor = () =>
   "#" +
@@ -30,7 +30,14 @@ export default function RandomColor({ cb }: { cb: () => any }) {
         Click the button below to choose a random color. Watch the styles in
         each libraries tag.
       </p>
-      <BigButton onClick={newColor}>Toggle Color</BigButton>
+      <BigButton
+        onClick={() => {
+          newColor();
+          triggerSC();
+        }}
+      >
+        Toggle Color
+      </BigButton>
       <Columns>
         <div className="grid">
           <h3>Styled Components</h3>

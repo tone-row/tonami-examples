@@ -10,7 +10,7 @@ import {
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
 import "@reach/tabs/styles.css";
 import { styled as s, setup } from "goober";
-import { Columns, Highlight } from "./components";
+import { Columns, Highlight, triggerSC } from "./components";
 import "./styles.css";
 const RandomColor = lazy(() => import("./examples/RandomColor"));
 const Typography = lazy(() => import("./examples/Typography"));
@@ -39,7 +39,13 @@ function useStyleTagString(
   useEffect(() => {
     if (enabled) {
       const targetNode = document.querySelector(querySelector);
-      const config = { attributes: true, childList: true, subtree: true };
+      const config = {
+        attributes: true,
+        childList: true,
+        subtree: true,
+        attributesOldValue: true,
+        characterData: true,
+      };
       const observer = new MutationObserver(() => {
         updateStyles();
         if (cb) setTimeout(cb);
@@ -97,6 +103,7 @@ export default function App() {
   const [enabled, enable] = useReducer(() => true, false);
   const handleTabsChange = (index: number) => {
     setTabIndex(index);
+    triggerSC();
   };
   const sc = useStyleTagString(
     "[data-styled-version]",

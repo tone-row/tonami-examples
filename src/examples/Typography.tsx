@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { styled as tonamiStyled } from "tonami";
 import React, { useEffect, useState } from "react";
-import { Columns, Highlight } from "../components";
+import { Columns, Highlight, triggerSC } from "../components";
 import { styled as s } from "goober";
 
 const scale = 1.25;
@@ -30,7 +30,10 @@ export default function Typography({ cb }: { cb: () => any }) {
         min={-1}
         value={size}
         max={4}
-        onChange={(e) => setSize(parseInt(e.target.value, 10))}
+        onChange={(e) => {
+          setSize(parseInt(e.target.value, 10));
+          triggerSC();
+        }}
       />
       <Columns>
         <div className="grid">
