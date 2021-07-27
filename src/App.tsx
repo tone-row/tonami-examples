@@ -103,8 +103,8 @@ export default function App() {
   const [enabled, enable] = useReducer(() => true, false);
   const handleTabsChange = (index: number) => {
     setTabIndex(index);
-    triggerSC();
   };
+
   const sc = useStyleTagString(
     "[data-styled-version]",
     enabled,
@@ -151,14 +151,24 @@ export default function App() {
           <TabPanel>
             {tabIndex === 1 && (
               <Safe>
-                <Typography cb={enable} />
+                <Typography
+                  cb={() => {
+                    enable();
+                    triggerSC();
+                  }}
+                />
               </Safe>
             )}
           </TabPanel>
           <TabPanel>
             {tabIndex === 2 && (
               <Safe>
-                <RandomColor cb={enable} />
+                <RandomColor
+                  cb={() => {
+                    enable();
+                    triggerSC();
+                  }}
+                />
               </Safe>
             )}
           </TabPanel>
