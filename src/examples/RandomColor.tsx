@@ -16,11 +16,12 @@ const BoxSC = styled.div<{ col: string }>`
 
 const BoxT = tonamiStyled.div<{ $col: string }>({
   padding: "20px",
-  backgroundColor: ({ $col }) => $col
+  backgroundColor: ({ $col }) => $col,
 });
 
 export default function RandomColor({ cb }: { cb: () => any }) {
   const [color, newColor] = useReducer(randomColor, randomColor());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(cb, []);
   return (
     <div className="grid">

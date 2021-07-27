@@ -12,13 +12,14 @@ const TypographySC = styled.span<{ size: number }>`
 `;
 
 const TypographyT = tonamiStyled.span<{ $size: number }>({
-  fontSize: ({ $size }) => Math.pow(scale, $size) * base + "px"
+  fontSize: ({ $size }) => Math.pow(scale, $size) * base + "px",
 });
 
 const Protect = s("div")`width: 100%; overflow-x: hidden;`;
 
 export default function Typography({ cb }: { cb: () => any }) {
   const [size, setSize] = useState(0);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(cb, []);
   return (
     <div className="grid">
