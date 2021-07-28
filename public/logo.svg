@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="121.154 92.311 195.542 178.99" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <filter id="drop-shadow-filter-0" x="-500%" y="-500%" width="1000%" height="1000%" bx:preset="drop-shadow 1 10 10 5 0.31 rgba(0,0,0,0.3)">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+      <feOffset dx="10" dy="10"/>
+      <feComponentTransfer result="offsetblur">
+        <feFuncA id="spread-ctrl" type="linear" slope="0.62"/>
+      </feComponentTransfer>
+      <feFlood flood-color="rgba(0,0,0,0.3)"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <path style="fill: rgb(62, 237, 83); filter: url(#drop-shadow-filter-0);" d="M 245.446 232.898 C 286.203 232.898 311.676 190.563 291.299 156.695 C 290.98 156.165 290.653 155.641 290.313 155.123 C 258.372 106.152 184.908 103.812 149.652 150.642 C 122.733 191.238 151.71 244.573 201.811 246.643 C 217.613 247.297 233.123 242.411 245.446 232.898 Z" transform="matrix(0.930693, 0.365802, -0.365802, 0.930693, 81.678185, -67.48259)"/>
+  <path style="paint-order: fill; fill-opacity: 0.97; fill: rgb(218, 254, 147);" d="M 237.434 223.601 C 272.057 223.601 293.697 186.121 276.386 156.137 C 276.115 155.668 275.836 155.204 275.548 154.745 C 248.414 111.39 186.008 109.318 156.058 150.778 C 133.191 186.719 157.806 233.937 200.366 235.77 C 213.79 236.349 226.965 232.023 237.434 223.601 Z"/>
+  <ellipse style="fill: rgb(62, 237, 83);" cx="166.726" cy="173.849" rx="11.272" ry="12.368"/>
+  <path d="M 269.17 273.54 m -24.66 0 a 24.66 24.66 0 1 0 49.32 0 a 24.66 24.66 0 1 0 -49.32 0 Z M 269.17 273.54 m -14.796 0 a 14.796 14.796 0 0 1 29.592 0 a 14.796 14.796 0 0 1 -29.592 0 Z" style="fill: rgb(92, 111, 255);" transform="matrix(-0.685251, 0.728307, -0.728307, -0.685251, 551.200134, 159.175568)" bx:shape="ring 269.17 273.54 14.796 14.796 24.66 24.66 1@8a843558"/>
+  <ellipse style="fill: rgb(62, 237, 83);" cx="230.045" cy="170.342" rx="11.272" ry="12.368"/>
+  <path d="M 269.17 273.54 m -24.66 0 a 24.66 26.968 0 1 0 49.32 0 a 24.66 26.968 0 1 0 -49.32 0 Z M 269.17 273.54 m -14.796 0 a 14.796 16.181 0 0 1 29.592 0 a 14.796 16.181 0 0 1 -29.592 0 Z" style="fill: rgb(92, 111, 255);" transform="matrix(-0.685251, 0.728307, -0.728307, -0.685251, 614.802795, 155.370621)" bx:shape="ring 269.17 273.54 14.796 16.181 24.66 26.968 1@0806438f"/>
+  <path style="fill: none; stroke: rgb(92, 111, 255); stroke-width: 2px;" d="M 162.24 235.835 C 191.626 235.835 218.971 220.807 234.723 195.999" transform="matrix(0.996195, 0.087155, -0.087155, 0.996195, 19.573626, -16.477125)"/>
+</svg>

@@ -1,7 +1,7 @@
 .App {
   font-family: "Inter", sans-serif;
   display: grid;
-  gap: 3rem;
+  gap: 1rem;
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
@@ -35,21 +35,28 @@ body,
 [data-reach-tab-list] {
   margin-bottom: 20px;
   font-size: 125%;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: transparent;
 }
 
 [data-reach-tab] {
-  border-bottom: 3px solid transparent;
+  border-bottom: 3px solid lightgrey;
   padding-left: 30px;
   padding-right: 30px;
 }
-[data-reach-tab][data-selected],
-[data-reach-tab]:hover {
+[data-reach-tab][data-selected] {
   background-color: #ccc;
 }
 
-[data-reach-tab-panel] {
-  border: solid 1px #ddd;
-  border-radius: 3px;
-  background-color: #fafafa;
-  padding: 20px;
+[data-reach-tab]:hover {
+  background-color: #eee;
+}
+
+header {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: start;
 }

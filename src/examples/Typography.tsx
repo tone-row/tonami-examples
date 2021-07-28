@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import { styled as tonamiStyled } from "tonami";
 import React, { useEffect, useState } from "react";
-import { Columns, Highlight, triggerSC } from "../components";
+import {
+  Columns,
+  Highlight,
+  triggerSC,
+  Interactive,
+} from "../components/components";
 import { styled as s } from "goober";
 
 const scale = 1.25;
@@ -24,17 +29,22 @@ export default function Typography({ cb }: { cb: () => any }) {
   return (
     <div className="grid">
       <h2>Typography Component</h2>
-      <p>Try altering the text size with the slider</p>
-      <input
-        type="range"
-        min={-1}
-        value={size}
-        max={4}
-        onChange={(e) => {
-          setSize(parseInt(e.target.value, 10));
-          triggerSC();
-        }}
-      />
+      <Interactive className="grid">
+        <p>
+          Try altering the text size with the slider, then checkout the style
+          tag content below.
+        </p>
+        <input
+          type="range"
+          min={-1}
+          value={size}
+          max={4}
+          onChange={(e) => {
+            setSize(parseInt(e.target.value, 10));
+            triggerSC();
+          }}
+        />
+      </Interactive>
       <Columns>
         <div className="grid">
           <h3>Styled Components</h3>
